@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StructNameSpace
 {
-        struct TimeStruct
+        internal struct TimeStruct
         {   
             private int seconds;
 

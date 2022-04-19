@@ -2,16 +2,20 @@
 
 namespace Program
 {
-    public class program
+    public struct program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            TimeStruct time = new TimeStruct ();
+            TimeStruct time = new TimeStruct();
             time.Seconds = 10;
+            UpdateTime(time);
 
-            Console.WriteLine (time.Seconds);
+           
         }
-
-
+        public static void UpdateTime(TimeStruct time)
+        {
+            time.Seconds++;
+            Console.WriteLine(time);
+        }
     }
 }
