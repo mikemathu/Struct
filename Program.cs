@@ -1,9 +1,12 @@
-﻿using StructNameSpace;
+﻿//using StructNameSpace;
+using WrapperStruct;
 
-namespace Program
+namespace ProgramNameSpace
 {
-    public struct program
+    public struct Program
     {
+        //TIMESTRUCT PROGRAMS
+        /*
         public static void Main(string[] args)
         {
             TimeStruct time = new TimeStruct();
@@ -17,5 +20,24 @@ namespace Program
             time.Seconds++;
             Console.WriteLine(time);
         }
+        */
+
+        //WRAPPER PROGRAM
+        public static void Main(string[] args)
+        {
+            Wrapper wrapper = new Wrapper();
+            wrapper.numbers = new int[3] { 40, 20, 30 };
+            UpdateArray(wrapper);
+            Console.WriteLine(wrapper.numbers);
+        }
+        public void UpdateArray(Wrapper wrapper)
+        {
+            wrapper.numbers[1] = 200;
+            Console.WriteLine(wrapper.numbers[1]);
+        }
+
+
+
+
     }
 }
